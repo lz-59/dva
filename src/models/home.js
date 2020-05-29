@@ -51,25 +51,25 @@ export default {
     delDatas(state, { payload }) {
       if(Number(payload.status) === 200){
         state.data = state.data.filter(i => i.id !== payload.id)
-        alert("删除成功")
+        console.log("删除成功")
       }else{
-        alert("删除失败")
+        console.log("删除失败")
       }
       return { ...state, data: state.data };
     },
     addDatas(state, { payload }) {
       if(Number(payload) === 200){
-        alert("添加成功")
+        console.log("添加成功")
       }else{
-        alert("添加失败")
+        console.log("添加失败")
       }
       return { ...state };
     },
     upDatas(state, { payload }) {
       if(Number(payload) === 200){
-        alert("修改成功")
+        console.log("修改成功")
       }else{
-        alert("修改失败")
+        console.log("修改失败")
       }
       return { ...state };
     },
