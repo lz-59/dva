@@ -20,7 +20,6 @@ axios.interceptors.response.use(response => {
 })
 
 
-// post
 export function post (url, data) {
   return new Promise((resolve, reject) => {
     axios({
@@ -33,7 +32,6 @@ export function post (url, data) {
   })
 }
 
-// get
 export function get (url, data = '') {
   return new Promise((resolve, reject) => {
     axios({
