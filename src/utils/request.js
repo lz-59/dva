@@ -13,13 +13,12 @@ axios.interceptors.request.use(config => {
 
 // 添加响应拦截器
 axios.interceptors.response.use(response => {
-  // 根据状态码跳转
   return response
 }, error => {
   return Promise.reject(error)
 })
 
-
+//post
 export function post (url, data) {
   return new Promise((resolve, reject) => {
     axios({
@@ -31,7 +30,7 @@ export function post (url, data) {
       .catch(err => console.log(err))
   })
 }
-
+//get
 export function get (url, data = '') {
   return new Promise((resolve, reject) => {
     axios({
